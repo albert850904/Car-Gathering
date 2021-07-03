@@ -1,7 +1,9 @@
 import { useContext } from "react";
+// a overlay
+// controlled globally >> control in anywhere of application
 
 import classes from "./notification.module.css";
-import NotificationContext from "../../store/notification-context";
+import NotificationContext from "../../store/NotificationContext";
 
 function Notification(props) {
   const notificationCtx = useContext(NotificationContext);

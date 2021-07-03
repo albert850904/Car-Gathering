@@ -11,7 +11,8 @@ export async function connectDatabaseHelper() {
 export async function insertDocumentHelper(client, collection, document) {
   const eventsDB = client.db("events");
   // insert 進去的叫做document (events DB 裏面的newsletter collection)
-  await eventsDB.collection(collection).insertOne(document);
+  const result = await eventsDB.collection(collection).insertOne(document);
+  return result;
 }
 
 export async function getAllDoucmentsHelper(
